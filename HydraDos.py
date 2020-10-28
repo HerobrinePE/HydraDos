@@ -41,7 +41,7 @@ Created By: HerobrinePE
 Channel: \33[4m https://www.youtube.com/c/HerobrinePE\33[0m\33[91m
 \33[40m\33[92m
 Using Too much Bytes can slow down internet speed depending on your internet connection
-\33[41m Multi\33[0m\33[92m Threading can also make it slow so i'd suggest 2-3 threads
+\33[41m Multi\33[0m\33[92m Threading can also make it slow
 
 **\33[1mI Am Not Responsible For Any Of Your Actions\33[0m\33[32m**
 =======================================
