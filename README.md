@@ -5,4 +5,4 @@ Written in Python 3<br />
 No Terminal Spam<br />
 Threads
 
-![Hydra Terminal](https://github.com/HerobrinePE/HydraDos/blob/main/20201028_085847.jpg)
+![Hydra Terminal](https://github.com/HerobrinePE/HydraDos/blob/main/20201028_090827.jpg)
